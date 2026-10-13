@@ -1,0 +1,30 @@
+name: Test the .deb packages
+on:
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  test:
+    strategy:
+      fail-fast: false
+      matrix:
+        image: ["ubuntu:24.04", "ubuntu:25.04", "debian:13", "linuxmintd/mint22-amd64"]
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Fetch the latest .deb of each screensaver
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          mkdir debs && cd debs
+          for r in teglon lazy-peregrin cutting-the-cake edhar-clock weed-war daban-urnud adrakhonic analemma bolt-chord-sphere wick fraa-in-orbit fly-bat-worm page-trees; do
+            gh release download -R mottipython/$r -p '*.deb'
+          done
+          ls -l
+      - name: Install and run each one on ${{ matrix.image }}
+        run: docker run --rm -v "$PWD":/w -w /w ${{ matrix.image }} tools/test-debs.sh
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: pictures-${{ strategy.job-index }}
+          path: out/

@@ -97,6 +97,14 @@ A fraa in orbit about Arbre chases the sphere he has let go of, and finds that t
 
 [Download](https://github.com/mottipython/fraa-in-orbit/releases/latest) · [About it](https://github.com/mottipython/fraa-in-orbit#readme)
 
+## [Fly, Bat, Worm](https://github.com/mottipython/fly-bat-worm)
+
+[![Fly, Bat, Worm](https://raw.githubusercontent.com/mottipython/fly-bat-worm/main/docs/screenshots/05-all-three.jpg)](https://github.com/mottipython/fly-bat-worm)
+
+Three creatures with one sense each come upon a clockwork trap in a cave. The Fly sees it as a mosaic, the Bat hears its own cries come back from its edges, the Worm knows only what it has crawled over. What they share is its shape.
+
+[Download](https://github.com/mottipython/fly-bat-worm/releases/latest) · [About it](https://github.com/mottipython/fly-bat-worm#readme)
+
 ## Running them on Linux
 
 Wayland desktops have no screensaver service, so each of these can start itself

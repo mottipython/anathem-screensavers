@@ -89,6 +89,14 @@ Calca 3: worlds joined by threads along which knowledge flows one way, built up 
 
 [Download](https://github.com/mottipython/wick/releases/latest) · [About it](https://github.com/mottipython/wick#readme)
 
+## [A Fraa in Orbit](https://github.com/mottipython/fraa-in-orbit)
+
+[![A Fraa in Orbit](https://raw.githubusercontent.com/mottipython/fraa-in-orbit/main/docs/screenshots/05-they-meet.jpg)](https://github.com/mottipython/fraa-in-orbit)
+
+A fraa in orbit about Arbre chases the sphere he has let go of, and finds that to catch up he must slow down. The orbits are computed.
+
+[Download](https://github.com/mottipython/fraa-in-orbit/releases/latest) · [About it](https://github.com/mottipython/fraa-in-orbit#readme)
+
 ## Running them on Linux
 
 Wayland desktops have no screensaver service, so each of these can start itself

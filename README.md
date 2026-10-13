@@ -3,7 +3,8 @@
 Screensavers from Neal Stephenson's novel *Anathem*, for Linux, Windows and macOS.
 Each is its own small program with its own installers: an `.rpm` for Fedora and
 Nobara, a `.deb` for Debian, Ubuntu and Mint, a Windows setup program that adds it
-to Screen Saver Settings, and an experimental Mac app.
+to Screen Saver Settings, and for the Mac a screen saver module and an app (both
+experimental).
 
 They are unofficial fan projects. *Anathem* and everything in it are Neal
 Stephenson's. The pictures were drawn with Google Gemini; the maths, the motion and
@@ -143,16 +144,26 @@ Reports are welcome.
 
 ## On a Mac
 
-Each release has two Mac downloads, for Apple Silicon and Intel: a screen saver
-module (`-mac-screensaver.zip`; unzip it and double-click the `.saver` file to
-install it, then pick it in System Settings, Screen Saver) and an ordinary app
-(`-mac.zip`) that runs full screen until a key is pressed. Teglon has only the app
-so far.
+Every release has two Mac downloads, for Apple Silicon and Intel, macOS 11 or later:
 
-Neither is signed with an Apple certificate, so macOS refuses them at first: allow
-them under System Settings, Privacy & Security. They are built on a Mac build
-machine, where the screen saver is loaded and made to draw as a test, but have not
-yet been tried by a person on a real Mac.
+- **The screen saver** is the file ending `-mac-screensaver.zip`. Unzip it,
+  double-click the `.saver` file and let macOS install it, then choose it in System
+  Settings, Screen Saver, at the end of the list.
+- **The app** is the file ending `-mac.zip`: the same thing as an ordinary program
+  that runs full screen until a key is pressed.
+
+Neither is signed with an Apple developer certificate, so macOS refuses them at
+first: allow them under System Settings, Privacy & Security.
+
+To fetch and try all of them at once, paste this into Terminal. It installs every
+screen saver module for your user, shows each app in a window for a few seconds,
+and writes a report:
+
+    curl -fsSL https://raw.githubusercontent.com/mottipython/anathem-screensavers/main/tools/mac-test.sh | sh
+
+The Mac builds are experimental. They are made on a Mac build machine, where each
+screen saver is loaded and made to draw as a test, but they have not yet been tried
+by a person on a real Mac. If you try one, please say how it went.
 
 ## Licence
 

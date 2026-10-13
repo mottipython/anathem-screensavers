@@ -161,9 +161,10 @@ and writes a report:
 
     curl -fsSL https://raw.githubusercontent.com/mottipython/anathem-screensavers/main/tools/mac-test.sh | sh
 
-The Mac builds are experimental. They are made on a Mac build machine, where each
-screen saver is loaded and made to draw as a test, but they have not yet been tried
-by a person on a real Mac. If you try one, please say how it went.
+The Mac builds are experimental. On macOS 15 on Intel (in a virtual machine) all
+thirteen apps open and draw, and all thirteen modules install. They have not yet
+been tried on Apple Silicon or on a Mac with a real graphics card. If you try one,
+please say how it went.
 
 ## Licence
 

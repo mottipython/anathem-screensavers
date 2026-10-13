@@ -138,33 +138,41 @@ and never locks the screen. On Fedora and Nobara:
   installs and draws; nobody has yet watched one on a Debian desktop.
 - **Windows:** the installers for Teglon and the Lazy Peregrin have been tried on
   Windows 11. The others are built the same way but untried.
-- **macOS:** see below.
+- **macOS:** tried on macOS 15 on Intel; see below.
 
 Reports are welcome.
 
 ## On a Mac
 
-Every release has two Mac downloads, for Apple Silicon and Intel, macOS 11 or later:
+Paste this into Terminal to install all of them as screen savers, for your user,
+with no password needed:
 
-- **The screen saver** is the file ending `-mac-screensaver.zip`. Unzip it,
-  double-click the `.saver` file and let macOS install it, then choose it in System
-  Settings, Screen Saver, at the end of the list.
-- **The app** is the file ending `-mac.zip`: the same thing as an ordinary program
-  that runs full screen until a key is pressed.
+    curl -fsSL https://raw.githubusercontent.com/mottipython/anathem-screensavers/main/tools/mac-install.sh | sh
 
-Neither is signed with an Apple developer certificate, so macOS refuses them at
-first: allow them under System Settings, Privacy & Security.
+It opens the Screen Saver settings when it has finished; they are at the end of the
+list. To install only some, name them:
 
-To fetch and try all of them at once, paste this into Terminal. It installs every
-screen saver module for your user, shows each app in a window for a few seconds,
-and writes a report:
+    curl -fsSL https://raw.githubusercontent.com/mottipython/anathem-screensavers/main/tools/mac-install.sh | sh -s -- edhar-clock wick teglon
 
-    curl -fsSL https://raw.githubusercontent.com/mottipython/anathem-screensavers/main/tools/mac-test.sh | sh
+And to take them off again:
 
-The Mac builds are experimental. On macOS 15 on Intel (in a virtual machine) all
-thirteen apps open and draw, and all thirteen modules install. They have not yet
-been tried on Apple Silicon or on a Mac with a real graphics card. If you try one,
-please say how it went.
+    curl -fsSL https://raw.githubusercontent.com/mottipython/anathem-screensavers/main/tools/mac-install.sh | sh -s -- --uninstall
+
+The names are `teglon`, `lazy-peregrin`, `cutting-the-cake`, `edhar-clock`,
+`weed-war`, `daban-urnud`, `adrakhonic`, `analemma`, `bolt-chord-sphere`, `wick`,
+`fraa-in-orbit`, `fly-bat-worm` and `page-trees`.
+
+Every release also has the two Mac files to download by hand, for Apple Silicon and
+Intel, macOS 11 or later: the screen saver module (`-mac-screensaver.zip`; unzip and
+double-click the `.saver` file) and an ordinary full-screen app (`-mac.zip`). They
+are not signed with an Apple developer certificate, so when downloaded in a browser
+macOS refuses them at first: allow them under System Settings, Privacy & Security.
+The command above avoids that.
+
+Tried on macOS 15 on Intel, in a virtual machine: all thirteen install, show their
+preview in System Settings and run as the screen saver. Not yet tried on Apple
+Silicon or with a real graphics card; reports are welcome. `tools/mac-test.sh` tries
+every one in turn and writes a report.
 
 ## Licence
 

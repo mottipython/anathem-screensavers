@@ -3,8 +3,7 @@
 Screensavers from Neal Stephenson's novel *Anathem*, for Linux, Windows and macOS.
 Each is its own small program with its own installers: an `.rpm` for Fedora and
 Nobara, a `.deb` for Debian, Ubuntu and Mint, a Windows setup program that adds it
-to Screen Saver Settings, and for the Mac a screen saver module and an app (both
-experimental).
+to Screen Saver Settings, and for the Mac a screen saver module and an app.
 
 They are unofficial fan projects. *Anathem* and everything in it are Neal
 Stephenson's. The pictures were drawn with Google Gemini; the maths, the motion and
@@ -130,15 +129,19 @@ and never locks the screen. On Fedora and Nobara:
 
 ## What is tested
 
-- **Fedora and Nobara:** the `.rpm` packages are the ones in daily use on Nobara 44
-  with KDE Plasma on Wayland.
+All thirteen have been tested on a Mac, on Windows and on Fedora-based Linux.
+
+- **macOS:** macOS 15 on Intel. Each one installs, shows up in Screen Saver
+  settings, previews and runs. They are built for macOS 11 and later, Apple Silicon
+  and Intel; Apple Silicon has not been tried by a person yet.
+- **Windows:** Windows 11. The setup program installs each one into Screen Saver
+  Settings.
+- **Fedora and Nobara:** the `.rpm` packages are in daily use on Nobara 44 (Fedora
+  44) with KDE Plasma on Wayland.
 - **Debian, Ubuntu and Mint:** every `.deb` is installed and run on Ubuntu 24.04,
   Ubuntu 25.04, Debian 13 and Mint 22 by an automated test
   ([the last run](../../actions/workflows/test-debs.yml)). That shows each one
   installs and draws; nobody has yet watched one on a Debian desktop.
-- **Windows:** the installers for Teglon and the Lazy Peregrin have been tried on
-  Windows 11. The others are built the same way but untried.
-- **macOS:** tried on macOS 15 on Intel; see below.
 
 Reports are welcome.
 

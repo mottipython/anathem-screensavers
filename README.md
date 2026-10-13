@@ -1,9 +1,9 @@
 # Anathem screensavers
 
-Screensavers from Neal Stephenson's novel *Anathem*, for Linux and Windows. Each is
-its own small program with its own installers: an `.rpm` for Fedora and Nobara, a
-`.deb` for Debian, Ubuntu and Mint, and a Windows setup program that adds it to
-Screen Saver Settings.
+Screensavers from Neal Stephenson's novel *Anathem*, for Linux, Windows and macOS.
+Each is its own small program with its own installers: an `.rpm` for Fedora and
+Nobara, a `.deb` for Debian, Ubuntu and Mint, a Windows setup program that adds it
+to Screen Saver Settings, and an experimental Mac app.
 
 They are unofficial fan projects. *Anathem* and everything in it are Neal
 Stephenson's. The pictures were drawn with Google Gemini; the maths, the motion and
@@ -105,6 +105,14 @@ Three creatures with one sense each come upon a clockwork trap in a cave. The Fl
 
 [Download](https://github.com/mottipython/fly-bat-worm/releases/latest) · [About it](https://github.com/mottipython/fly-bat-worm#readme)
 
+## [The Page Trees](https://github.com/mottipython/page-trees)
+
+[![The Page Trees](https://raw.githubusercontent.com/mottipython/page-trees/main/docs/screenshots/03-autumn.jpg)](https://github.com/mottipython/page-trees)
+
+A quiet grove through the year, starting at the season it really is. The leaves bud, broaden and turn; a fraa picks them by hand and they dry on lines; then a hundred years under stones, and a page.
+
+[Download](https://github.com/mottipython/page-trees/releases/latest) · [About it](https://github.com/mottipython/page-trees#readme)
+
 ## Running them on Linux
 
 Wayland desktops have no screensaver service, so each of these can start itself
@@ -125,6 +133,15 @@ The `.rpm` packages are the ones in daily use on Nobara 44 with KDE Plasma on
 Wayland. The Windows installers for Teglon and the Lazy Peregrin have been tried on
 Windows 11; the other Windows installers and all the `.deb` packages are built the
 same way but have not been tried on a real machine. Reports are welcome.
+
+## On a Mac
+
+Each release has a `-mac.zip` with an app in it, for Apple Silicon and Intel. It
+runs full screen and any key ends it. It is an app and not yet a screen saver
+module, so it does not appear in the Screen Saver settings. It is not signed with an
+Apple certificate, so the first time you must right-click it and choose Open, or
+allow it under System Settings, Privacy & Security. The Mac builds have been built
+and run on a build machine, but not yet tried by a person on a real Mac.
 
 ## Licence
 

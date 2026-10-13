@@ -17,7 +17,7 @@ jobs:
           GH_TOKEN: ${{ github.token }}
         run: |
           mkdir debs && cd debs
-          for r in teglon lazy-peregrin cutting-the-cake edhar-clock weed-war daban-urnud adrakhonic analemma bolt-chord-sphere wick fraa-in-orbit fly-bat-worm page-trees; do
+          for r in teglon lazy-peregrin cutting-the-cake edhar-clock weed-war daban-urnud adrakhonic analemma bolt-chord-sphere wick fraa-in-orbit fly-bat-worm page-trees hemn-space; do
             gh release download -R mottipython/$r -p '*.deb'
           done
           ls -l

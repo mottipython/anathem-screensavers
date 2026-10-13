@@ -10,13 +10,14 @@
 #
 # Each screen saver module goes into ~/Library/Screen Savers, for your user only, so no
 # password is asked for. Then choose one in System Settings, Screen Saver.
-ALL="teglon lazy-peregrin cutting-the-cake edhar-clock weed-war daban-urnud adrakhonic analemma bolt-chord-sphere wick fraa-in-orbit fly-bat-worm page-trees"
+ALL="teglon lazy-peregrin cutting-the-cake edhar-clock weed-war daban-urnud adrakhonic analemma bolt-chord-sphere wick fraa-in-orbit fly-bat-worm page-trees hemn-space"
 title() {
     case "$1" in
     teglon) echo "Teglon" ;; lazy-peregrin) echo "The Lazy Peregrin" ;; cutting-the-cake) echo "Cutting the Cake" ;;
     edhar-clock) echo "The Clock of Saunt Edhar" ;; weed-war) echo "The Weed War" ;; daban-urnud) echo "The Daban Urnud" ;;
     adrakhonic) echo "The Adrakhonic Theorem" ;; analemma) echo "The Analemma" ;; bolt-chord-sphere) echo "Bolt, Chord and Sphere" ;;
     wick) echo "The Wick" ;; fraa-in-orbit) echo "A Fraa in Orbit" ;; fly-bat-worm) echo "Fly, Bat, Worm" ;; page-trees) echo "The Page Trees" ;;
+    hemn-space) echo "Hemn Space" ;;
     *) return 1 ;;
     esac
 }

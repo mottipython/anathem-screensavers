@@ -113,6 +113,14 @@ A quiet grove through the year, starting at the season it really is. The leaves 
 
 [Download](https://github.com/mottipython/page-trees/releases/latest) · [About it](https://github.com/mottipython/page-trees#readme)
 
+## [Hemn Space](https://github.com/mottipython/hemn-space)
+
+[![Hemn Space](https://raw.githubusercontent.com/mottipython/hemn-space/main/docs/screenshots/04-the-marks.jpg)](https://github.com/mottipython/hemn-space)
+
+Calca 2. Erasmas teaches Barb on the kitchen floor with a bottle, a potato and a slate: a row of numbers is a point, a journey is a line, a collision is a hairpin, and a satellite needs six numbers however you choose them.
+
+[Download](https://github.com/mottipython/hemn-space/releases/latest) · [About it](https://github.com/mottipython/hemn-space#readme)
+
 ## Running them on Linux
 
 Wayland desktops have no screensaver service, so each of these can start itself
@@ -129,7 +137,9 @@ and never locks the screen. On Fedora and Nobara:
 
 ## What is tested
 
-All thirteen have been tested on a Mac, on Windows and on Fedora-based Linux.
+The first thirteen have been tested on a Mac, on Windows and on Fedora-based Linux.
+Hemn Space is new: it has been run on Nobara 44, and its other builds have only
+been through the automated tests.
 
 - **macOS:** macOS 15 on Intel. Each one installs, shows up in Screen Saver
   settings, previews and runs. They are built for macOS 11 and later, Apple Silicon
@@ -163,7 +173,7 @@ And to take them off again:
 
 The names are `teglon`, `lazy-peregrin`, `cutting-the-cake`, `edhar-clock`,
 `weed-war`, `daban-urnud`, `adrakhonic`, `analemma`, `bolt-chord-sphere`, `wick`,
-`fraa-in-orbit`, `fly-bat-worm` and `page-trees`.
+`fraa-in-orbit`, `fly-bat-worm`, `page-trees` and `hemn-space`.
 
 Every release also has the two Mac files to download by hand, for Apple Silicon and
 Intel, macOS 11 or later: the screen saver module (`-mac-screensaver.zip`; unzip and

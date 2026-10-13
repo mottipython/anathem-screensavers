@@ -9,7 +9,7 @@ mkdir -p "$dir" "$HOME/Library/Screen Savers"; cd "$dir" || exit 1
 say() { echo "$*" | tee -a "$report"; }
 say "Mac: $(sw_vers -productName 2>/dev/null) $(sw_vers -productVersion 2>/dev/null), $(uname -m)"
 say ""
-for repo in edhar-clock teglon lazy-peregrin cutting-the-cake weed-war daban-urnud adrakhonic analemma bolt-chord-sphere wick fraa-in-orbit fly-bat-worm page-trees; do
+for repo in edhar-clock teglon lazy-peregrin cutting-the-cake weed-war daban-urnud adrakhonic analemma bolt-chord-sphere wick fraa-in-orbit fly-bat-worm page-trees hemn-space; do
     urls=$(curl -fsSL "https://api.github.com/repos/mottipython/$repo/releases/latest" | grep browser_download_url | grep -- '-mac' | sed 's/.*"\(https[^"]*\)".*/\1/')
     [ -n "$urls" ] || { say "FAIL  $repo: no Mac downloads found"; continue; }
     rm -rf "$repo"; mkdir "$repo"

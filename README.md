@@ -129,19 +129,30 @@ and never locks the screen. On Fedora and Nobara:
 
 ## What is tested
 
-The `.rpm` packages are the ones in daily use on Nobara 44 with KDE Plasma on
-Wayland. The Windows installers for Teglon and the Lazy Peregrin have been tried on
-Windows 11; the other Windows installers and all the `.deb` packages are built the
-same way but have not been tried on a real machine. Reports are welcome.
+- **Fedora and Nobara:** the `.rpm` packages are the ones in daily use on Nobara 44
+  with KDE Plasma on Wayland.
+- **Debian, Ubuntu and Mint:** every `.deb` is installed and run on Ubuntu 24.04,
+  Ubuntu 25.04, Debian 13 and Mint 22 by an automated test
+  ([the last run](../../actions/workflows/test-debs.yml)). That shows each one
+  installs and draws; nobody has yet watched one on a Debian desktop.
+- **Windows:** the installers for Teglon and the Lazy Peregrin have been tried on
+  Windows 11. The others are built the same way but untried.
+- **macOS:** see below.
+
+Reports are welcome.
 
 ## On a Mac
 
-Each release has a `-mac.zip` with an app in it, for Apple Silicon and Intel. It
-runs full screen and any key ends it. It is an app and not yet a screen saver
-module, so it does not appear in the Screen Saver settings. It is not signed with an
-Apple certificate, so the first time you must right-click it and choose Open, or
-allow it under System Settings, Privacy & Security. The Mac builds have been built
-and run on a build machine, but not yet tried by a person on a real Mac.
+Each release has two Mac downloads, for Apple Silicon and Intel: a screen saver
+module (`-mac-screensaver.zip`; unzip it and double-click the `.saver` file to
+install it, then pick it in System Settings, Screen Saver) and an ordinary app
+(`-mac.zip`) that runs full screen until a key is pressed. Teglon has only the app
+so far.
+
+Neither is signed with an Apple certificate, so macOS refuses them at first: allow
+them under System Settings, Privacy & Security. They are built on a Mac build
+machine, where the screen saver is loaded and made to draw as a test, but have not
+yet been tried by a person on a real Mac.
 
 ## Licence
 

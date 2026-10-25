@@ -187,6 +187,14 @@ preview in System Settings and run as the screen saver. Not yet tried on Apple
 Silicon or with a real graphics card; reports are welcome. `tools/mac-test.sh` tries
 every one in turn and writes a report.
 
+## Security, Fuzzing & Robustness Testing
+
+The Anathem screensavers are hardened and tested with automated fuzzing and compiler sanitizers:
+- **Solver & CLI Hardening**: `teglon-solve` and screensaver CLI parsers include strict bounds checking and validation on all floating-point and integer options.
+- **Image Decoding**: Hardened `stb_image.h` protecting against malformed PNG chunks and memory corruption.
+- **Simulation Stability**: Numerical simulation algorithms (orbits, spring-dampers, cellular automata) feature epsilon clamping and sub-stepping to prevent division-by-zero or numerical blow-up.
+- **Fuzzing & Regression**: Repositories include standalone `libFuzzer` harnesses with AddressSanitizer (ASan) and UBSan, alongside regression test corpora under `test/fuzz_corpus/` (`make fuzz-check`).
+
 ## Licence
 
 Every project here is MIT.
